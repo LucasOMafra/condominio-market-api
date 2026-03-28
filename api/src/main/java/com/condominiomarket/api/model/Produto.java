@@ -32,4 +32,8 @@ public class Produto {
     @Min(0)
     @Column(nullable = false)
     private Integer estoque;
+
+    @ManyToOne
+    @JoinColumn(name = "categoria_id")
+    private Categoria categoria;
 }
