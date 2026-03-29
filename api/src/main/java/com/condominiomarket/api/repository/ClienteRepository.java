@@ -10,4 +10,7 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long> {
     // O Spring gera a query automaticamente pelo nome do método
     boolean existsByCpf(String cpf);
     boolean existsByEmail(String email);
+
+    // Busca cliente pelo CPF para identificação no totem
+    java.util.Optional<Cliente> findByCpf(String cpf);
 }

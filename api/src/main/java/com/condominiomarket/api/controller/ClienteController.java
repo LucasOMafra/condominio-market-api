@@ -42,4 +42,10 @@ public class ClienteController {
         clienteService.deletar(id);
         return ResponseEntity.noContent().build();
     }
+
+    // Endpoint usado pelo totem para identificar o morador pelo CPF
+    @GetMapping("/cpf/{cpf}")
+    public ResponseEntity<Cliente> buscarPorCpf(@PathVariable String cpf) {
+    return ResponseEntity.ok(clienteService.buscarPorCpf(cpf));
+    }
 }

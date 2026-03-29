@@ -16,6 +16,7 @@ function Navbar() {
       <Link to="/categorias" style={linkStyle}>Categorias</Link>
       <Link to="/clientes" style={linkStyle}>Clientes</Link>
       <Link to="/pedidos" style={linkStyle}>Pedidos</Link>
+      <Link to="/totem" style={linkStyle}>Totem</Link>
     </nav>
   )
 }
